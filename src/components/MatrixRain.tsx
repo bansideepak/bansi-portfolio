@@ -102,7 +102,7 @@ export function MatrixRain(_props: MatrixRainProps) {
         maskImage:
           "radial-gradient(ellipse 30% 80% at 50% 50%, transparent 50%, black 100%)",
         WebkitMaskImage:
-          "radial-gradient(ellipse 50% 80% at 50% 50%, transparent 50%, black 100%)",
+          "radial-gradient(ellipse 40% 80% at 50% 50%, transparent 50%, black 100%)",
       }}
     />
   );
