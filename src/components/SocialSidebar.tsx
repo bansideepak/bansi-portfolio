@@ -5,6 +5,7 @@ const socials = [
   { icon: "mdi:linkedin", href: "https://linkedin.com/in/BansiDeepak", label: "LinkedIn" },
   { icon: "mdi:email-outline", href: "mailto:bansideepak2000@gmail.com", label: "Email" },
   { icon: "mdi:phone-outline", href: "tel:+917330056795", label: "Phone" },
+  { icon: "mdi:instagram", href: "https://www.instagram.com/bansiiideepak?igsh=MTd5dmYxOHB2bjV5ag%3D%3D&utm_source=qr", label: "Instagram" },
 ];
 
 export function SocialSidebar() {
