@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+@theme {
+  --font-mono: "Martian Mono", monospace;
+  --color-matrix: #4ade80;
+  --color-matrix-light: #86efac;
+  --color-matrix-dark: #22c55e;
+  --color-matrix-bg: #000000;
+  --color-matrix-text: #e5e7eb;
+  --animate-blink: blink 1s step-start infinite;
+  --animate-glow-pulse: glow-pulse 2s ease-in-out infinite;
+  --animate-kenburns: kenburns 30s ease-in-out infinite;
+
+  @keyframes blink {
+    50% { opacity: 0; }
+  }
+
+  @keyframes glow-pulse {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+  }
+
+  @keyframes kenburns {
+    0%   { transform: scale(1.05) translate(0%, 0%); }
+    50%  { transform: scale(1.15) translate(-1%, -0.5%); }
+    100% { transform: scale(1.05) translate(0%, 0%); }
+  }
+}
+
+body {
+  background-color: #000;
+  color: #e5e7eb;
+  font-family: "Martian Mono", monospace;
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: #4ade80;
+  color: #000;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #000;
+  border-left: 1px solid #1a1a1a;
+}
+::-webkit-scrollbar-thumb {
+  background: #22c55e;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #4ade80;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1),
+    transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stagger-1 { transition-delay: 100ms; }
+.stagger-2 { transition-delay: 200ms; }
+.stagger-3 { transition-delay: 300ms; }
+.stagger-4 { transition-delay: 400ms; }
+.stagger-5 { transition-delay: 500ms; }
+
+.neon-hover {
+  transition: all 0.3s ease;
+}
+.neon-hover:hover {
+  filter: drop-shadow(0 0 20px rgba(74, 222, 128, 0.6));
+  color: #86efac;
+}
+
+.glow-text {
+  text-shadow: 0 0 8px rgba(74, 222, 128, 0.3);
+}
+
+.typing-cursor::after {
+  content: "\2588";
+  animation: blink 1s step-start infinite;
+  color: #4ade80;
+  margin-left: 4px;
+}
+
+.neon-link {
+  color: #4ade80;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.neon-link:hover {
+  filter: drop-shadow(0 0 20px rgba(74, 222, 128, 0.6));
+  color: #86efac;
+}
+
+.marquee-scroll {
+  animation: marquee 100s linear infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
