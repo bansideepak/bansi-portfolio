@@ -25,11 +25,11 @@ export function Hero() {
         <div
           className="absolute inset-0 animate-kenburns"
           style={{
-            backgroundImage: "url(/Hero-final.png)",
-            backgroundSize: "60%",
+            backgroundImage: "url(/Hero-smooth2.png)",
+            backgroundSize: "55%",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
-            opacity: 0.2,
+            opacity: 0.6,
           }}
         />
         <MatrixRain />
