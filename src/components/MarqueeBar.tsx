@@ -36,6 +36,7 @@ export function MarqueeBar() {
     let lastTime = performance.now();
 
     function tick(now: number) {
+      if (!track) return;
       const delta = now - lastTime;
       lastTime = now;
 
