@@ -2,9 +2,10 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const titles = [
-  "full stack ai engineer",
-  "web developer",
+  "ai engineer",
+  "full stack developer",
   "creator",
+  "artist",
 ];
 
 export function RotatingTitle() {

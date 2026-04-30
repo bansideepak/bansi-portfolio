@@ -12,9 +12,19 @@ export function MarqueeBar() {
       text: "Hi, I am Bansi Deepak Bollapally, an AI Engineer based in India.",
     },
     { text: "building scalable AI systems & platforms" },
-    { text: "deving @ Neurom", href: "https://www.neurominnovations.com/" },
+    {
+      text: "engineering @ Neurom",
+      href: "https://www.neurominnovations.com/",
+    },
     { text: "i am a creator" },
-    { text: "i ♡ art " },
+    {
+      text: "commission painter & artist",
+      href: "https://www.instagram.com/the.aseth____",
+    },
+    {
+      text: "Building @ the.aseth",
+      href: "https://www.instagram.com/the.aseth____",
+    },
   ];
 
   const content = [...items, ...items, ...items, ...items];
@@ -33,7 +43,9 @@ export function MarqueeBar() {
 
       offsetRef.current -= speedRef.current * (delta / 16);
 
-      const halfWidth = track.scrollWidth / (content.length / items.length) / 2 || track.scrollWidth / 2;
+      const halfWidth =
+        track.scrollWidth / (content.length / items.length) / 2 ||
+        track.scrollWidth / 2;
       if (Math.abs(offsetRef.current) >= halfWidth) {
         offsetRef.current += halfWidth;
       }
@@ -51,8 +63,12 @@ export function MarqueeBar() {
       <div
         ref={trackRef}
         className="flex w-max"
-        onMouseEnter={() => { targetSpeedRef.current = 0.3; }}
-        onMouseLeave={() => { targetSpeedRef.current = 1; }}
+        onMouseEnter={() => {
+          targetSpeedRef.current = 0.3;
+        }}
+        onMouseLeave={() => {
+          targetSpeedRef.current = 1;
+        }}
       >
         {content.map((item, i) => (
           <span key={i} className="flex items-center shrink-0">

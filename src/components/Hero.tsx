@@ -41,7 +41,7 @@ export function Hero() {
         <div className="font-mono text-xl md:text-3xl font-normal text-matrix tracking-tight text-left cursor-default glow-text neon-hover md:w-[30%]">
           <RotatingTitle />
         </div>
-        <p className="font-mono text-sm md:text-xl text-matrix/80 md:max-w-md text-right cursor-default neon-hover">
+          <p className="font-mono text-sm md:text-xl text-matrix/80 md:max-w-md text-right cursor-default glow-text neon-hover">
           $ whoami <span className="text-matrix-light">→</span> ai engineer
         </p>
       </div>
