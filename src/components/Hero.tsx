@@ -23,10 +23,9 @@ export function Hero() {
         }}
       >
         <div
-          className="absolute inset-0 animate-kenburns"
+          className="absolute inset-0 animate-kenburns hero-bg-image"
           style={{
-            backgroundImage: "url(/Hero-smooth2.png)",
-            backgroundSize: "55%",
+            backgroundImage: "url(/Hero-Potrait.png)",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
             opacity: 0.6,
@@ -38,17 +37,17 @@ export function Hero() {
       <MarqueeBar />
       <SocialSidebar />
 
-      <div className="absolute inset-x-0 bottom-0 flex flex-row items-end justify-between px-4 md:px-16 pb-8 md:pb-12 gap-4 z-20">
-        <div className="font-mono text-2xl md:text-3xl font-normal text-matrix tracking-tight text-left cursor-default glow-text neon-hover md:w-[30%]">
+      <div className="absolute inset-x-0 bottom-0 flex flex-col md:flex-row items-end justify-between px-4 md:px-16 pb-10 md:pb-12 gap-2 md:gap-4 z-20">
+        <div className="font-mono text-xl md:text-3xl font-normal text-matrix tracking-tight text-left cursor-default glow-text neon-hover md:w-[30%]">
           <RotatingTitle />
         </div>
-        <p className="font-mono text-base md:text-xl text-matrix/80 md:max-w-md text-right cursor-default neon-hover">
+        <p className="font-mono text-sm md:text-xl text-matrix/80 md:max-w-md text-right cursor-default neon-hover">
           $ whoami <span className="text-matrix-light">→</span> ai engineer
         </p>
       </div>
 
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20">
-        <span className="text-matrix/40 text-[10px] font-mono">
+      <div className="absolute bottom-2 left-1/2 -translate-x-1/2 z-20">
+        <span className="text-matrix/30 text-[9px] font-mono">
           $ scroll_down<span className="typing-cursor"></span>
         </span>
       </div>

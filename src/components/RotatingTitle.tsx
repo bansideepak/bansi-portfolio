@@ -4,7 +4,6 @@ import { motion, AnimatePresence } from "framer-motion";
 const titles = [
   "full stack ai engineer",
   "web developer",
-  "vibe coder",
   "creator",
 ];
 

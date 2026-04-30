@@ -4,6 +4,8 @@ export function useMouseParallax(intensity = 8, maxOffset = 80) {
   const [offset, setOffset] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
+    if (!window.matchMedia("(hover: hover)").matches) return;
+
     function handleMouseMove(e: MouseEvent) {
       const centerX = window.innerWidth / 2;
       const centerY = window.innerHeight / 2;

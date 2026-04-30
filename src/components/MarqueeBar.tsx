@@ -1,4 +1,8 @@
+import { useState } from "react";
+
 export function MarqueeBar() {
+  const [paused, setPaused] = useState(false);
+
   const items: { text: string; href?: string }[] = [
     {
       text: "Hi, I am Bansi Deepak Bollapally, a Junior AI Engineer based in India.",
@@ -11,9 +15,16 @@ export function MarqueeBar() {
 
   const content = [...items, ...items, ...items, ...items];
 
+  const pausedStyle = paused ? { animationPlayState: "paused" as const } : undefined;
+
   return (
     <header className="absolute inset-x-0 top-0 pt-6 md:pt-8 overflow-hidden z-20">
-      <div className="flex w-max marquee-scroll">
+      <div
+        className="flex w-max marquee-scroll"
+        style={pausedStyle}
+        onMouseEnter={() => setPaused(true)}
+        onMouseLeave={() => setPaused(false)}
+      >
         {content.map((item, i) => (
           <span key={i} className="flex items-center shrink-0">
             {item.href ? (

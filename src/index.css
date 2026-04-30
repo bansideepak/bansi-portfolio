@@ -34,6 +34,12 @@ body {
   overflow-x: hidden;
 }
 
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #4ade80;
+  outline-offset: 2px;
+}
+
 ::selection {
   background-color: #4ade80;
   color: #000;
@@ -76,7 +82,8 @@ body {
 .neon-hover {
   transition: all 0.3s ease;
 }
-.neon-hover:hover {
+.neon-hover:hover,
+.neon-hover:focus-visible {
   filter: drop-shadow(0 0 20px rgba(74, 222, 128, 0.6));
   color: #86efac;
 }
@@ -97,7 +104,8 @@ body {
   text-decoration: none;
   transition: all 0.3s ease;
 }
-.neon-link:hover {
+.neon-link:hover,
+.neon-link:focus-visible {
   filter: drop-shadow(0 0 20px rgba(74, 222, 128, 0.6));
   color: #86efac;
 }
@@ -109,4 +117,31 @@ body {
 @keyframes marquee {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-scroll,
+  .animate-kenburns,
+  .animate-glow-pulse {
+    animation: none !important;
+  }
+  .reveal {
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+.hero-bg-image {
+  background-size: 95%;
+  -webkit-mask-image: radial-gradient(ellipse 70% 70% at center, black 40%, transparent 100%);
+  mask-image: radial-gradient(ellipse 70% 70% at center, black 40%, transparent 100%);
+}
+
+@media (min-width: 768px) {
+  .hero-bg-image {
+    background-size: 55%;
+    -webkit-mask-image: radial-gradient(ellipse 60% 60% at center, black 50%, transparent 100%);
+    mask-image: radial-gradient(ellipse 60% 60% at center, black 50%, transparent 100%);
+  }
 }

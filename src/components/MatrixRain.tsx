@@ -11,6 +11,8 @@ export function MatrixRain(_props: MatrixRainProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -18,10 +20,11 @@ export function MatrixRain(_props: MatrixRainProps) {
     if (!ctx) return;
 
     let animationId: number;
-    const fontSize = 22;
+    let fontSize = window.innerWidth < 768 ? 14 : 22;
 
     function resize() {
       if (!canvas) return;
+      fontSize = window.innerWidth < 768 ? 14 : 22;
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     }
@@ -80,6 +83,7 @@ export function MatrixRain(_props: MatrixRainProps) {
     function handleResize() {
       resize();
       if (!canvas) return;
+      ctx!.font = `${fontSize}px "Martian Mono", monospace`;
       columns = Math.floor(canvas.width / fontSize);
       initDrops();
     }
@@ -96,13 +100,14 @@ export function MatrixRain(_props: MatrixRainProps) {
   return (
     <canvas
       ref={canvasRef}
+      aria-hidden="true"
       className="absolute inset-0 pointer-events-none"
       style={{
         opacity: 0.3,
         maskImage:
-          "radial-gradient(ellipse 30% 80% at 50% 50%, transparent 50%, black 100%)",
+          "radial-gradient(ellipse 30% 80% at 50% 50%, transparent 40%, black 100%)",
         WebkitMaskImage:
-          "radial-gradient(ellipse 40% 80% at 50% 50%, transparent 50%, black 100%)",
+          "radial-gradient(ellipse 40% 80% at 50% 50%, transparent 40%, black 100%)",
       }}
     />
   );

@@ -5,12 +5,12 @@ const socials = [
   { icon: "mdi:linkedin", href: "https://linkedin.com/in/BansiDeepak", label: "LinkedIn" },
   { icon: "mdi:email-outline", href: "mailto:bansideepak2000@gmail.com", label: "Email" },
   { icon: "mdi:phone-outline", href: "tel:+917330056795", label: "Phone" },
-  { icon: "mdi:instagram", href: "https://www.instagram.com/bansiiideepak?igsh=MTd5dmYxOHB2bjV5ag%3D%3D&utm_source=qr", label: "Instagram" },
+  { icon: "mdi:instagram", href: "https://www.instagram.com/bansiiideepak", label: "Instagram" },
 ];
 
 export function SocialSidebar() {
   return (
-    <nav aria-label="Social links" className="absolute right-4 top-1/2 -translate-y-1/2 flex flex-col items-center gap-4 z-20 md:left-8 md:right-auto md:top-24 md:translate-y-0 md:flex-row md:gap-5">
+    <nav aria-label="Social links" className="absolute right-3 top-1/2 -translate-y-1/2 flex flex-col items-center gap-3 z-20 md:left-8 md:right-auto md:top-24 md:translate-y-0 md:flex-row md:gap-5">
       {socials.map((s) => (
         <a
           key={s.label}
@@ -18,9 +18,9 @@ export function SocialSidebar() {
           target={s.href.startsWith("http") ? "_blank" : undefined}
           rel={s.href.startsWith("http") ? "noopener noreferrer" : undefined}
           aria-label={s.label}
-          className="text-matrix neon-hover hover:scale-125 cursor-pointer"
+          className="text-matrix neon-hover hover:scale-125 cursor-pointer p-2 md:p-0"
         >
-          <Icon icon={s.icon} className="text-2xl md:text-[26px]" />
+          <Icon icon={s.icon} className="text-xl md:text-[26px]" />
         </a>
       ))}
     </nav>

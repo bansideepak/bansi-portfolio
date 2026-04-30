@@ -19,7 +19,7 @@ export function Contact() {
         <ScrollReveal stagger={3}>
           <a
             href="mailto:bansideepak2000@gmail.com"
-            className="inline-block text-xl md:text-4xl neon-link border-b border-matrix pb-2"
+            className="inline-block text-lg md:text-4xl neon-link border-b border-matrix pb-2 break-all"
           >
             bansideepak2000@gmail.com
           </a>
