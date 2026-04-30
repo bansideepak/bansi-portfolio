@@ -1,11 +1,15 @@
-import { useState } from "react";
+import { useRef, useEffect } from "react";
 
 export function MarqueeBar() {
-  const [paused, setPaused] = useState(false);
+  const trackRef = useRef<HTMLDivElement>(null);
+  const offsetRef = useRef(0);
+  const speedRef = useRef(1);
+  const targetSpeedRef = useRef(1);
+  const rafRef = useRef<number>(0);
 
   const items: { text: string; href?: string }[] = [
     {
-      text: "Hi, I am Bansi Deepak Bollapally, a Junior AI Engineer based in India.",
+      text: "Hi, I am Bansi Deepak Bollapally, an AI Engineer based in India.",
     },
     { text: "building scalable AI systems & platforms" },
     { text: "deving @ Neurom", href: "https://www.neurominnovations.com/" },
@@ -15,15 +19,40 @@ export function MarqueeBar() {
 
   const content = [...items, ...items, ...items, ...items];
 
-  const pausedStyle = paused ? { animationPlayState: "paused" as const } : undefined;
+  useEffect(() => {
+    const track = trackRef.current;
+    if (!track) return;
+
+    let lastTime = performance.now();
+
+    function tick(now: number) {
+      const delta = now - lastTime;
+      lastTime = now;
+
+      speedRef.current += (targetSpeedRef.current - speedRef.current) * 0.02;
+
+      offsetRef.current -= speedRef.current * (delta / 16);
+
+      const halfWidth = track.scrollWidth / (content.length / items.length) / 2 || track.scrollWidth / 2;
+      if (Math.abs(offsetRef.current) >= halfWidth) {
+        offsetRef.current += halfWidth;
+      }
+
+      track.style.transform = `translateX(${offsetRef.current}px)`;
+      rafRef.current = requestAnimationFrame(tick);
+    }
+
+    rafRef.current = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(rafRef.current);
+  }, []);
 
   return (
     <header className="absolute inset-x-0 top-0 pt-6 md:pt-8 overflow-hidden z-20">
       <div
-        className="flex w-max marquee-scroll"
-        style={pausedStyle}
-        onMouseEnter={() => setPaused(true)}
-        onMouseLeave={() => setPaused(false)}
+        ref={trackRef}
+        className="flex w-max"
+        onMouseEnter={() => { targetSpeedRef.current = 0.3; }}
+        onMouseLeave={() => { targetSpeedRef.current = 1; }}
       >
         {content.map((item, i) => (
           <span key={i} className="flex items-center shrink-0">

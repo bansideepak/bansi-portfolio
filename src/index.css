@@ -114,6 +114,10 @@ button:focus-visible {
   animation: marquee 100s linear infinite;
 }
 
+.marquee-slow {
+  animation-duration: 250s;
+}
+
 @keyframes marquee {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
