@@ -44,11 +44,9 @@ export function MarqueeBar() {
 
       offsetRef.current -= speedRef.current * (delta / 16);
 
-      const halfWidth =
-        track.scrollWidth / (content.length / items.length) / 2 ||
-        track.scrollWidth / 2;
-      if (Math.abs(offsetRef.current) >= halfWidth) {
-        offsetRef.current += halfWidth;
+      const setWidth = track.scrollWidth / (content.length / items.length);
+      if (Math.abs(offsetRef.current) >= setWidth) {
+        offsetRef.current += setWidth;
       }
 
       track.style.transform = `translateX(${offsetRef.current}px)`;
