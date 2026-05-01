@@ -4,7 +4,7 @@ import { skills } from "../data/skills";
 
 export function About() {
   return (
-    <section id="about" className="py-24 px-4 md:px-6 relative z-20 bg-black" aria-label="About">
+    <section id="about" className="pt-16 pb-24 px-4 md:px-6 md:py-24 relative z-20 bg-black" aria-label="About">
       <TerminalCard path="~/about">
         <p className="text-matrix-dark mb-4">$ cat profile.txt</p>
         <div className="text-gray-300 space-y-4">
@@ -34,7 +34,7 @@ export function About() {
             {skills.map((skill, i) => (
               <div
                 key={skill}
-                className={`border border-matrix/20 p-2 text-matrix hover:bg-matrix hover:text-black hover:drop-shadow-[0_0_12px_rgba(74,222,128,0.4)] transition-all duration-300 reveal stagger-${(i % 5) + 1}`}
+                className={`border border-matrix/20 p-2 text-matrix hover:bg-matrix hover:text-black hover:drop-shadow-[0_0_12px_rgba(74,222,128,0.4)] active:bg-matrix active:text-black active:drop-shadow-[0_0_12px_rgba(74,222,128,0.4)] transition-all duration-300 reveal stagger-${(i % 5) + 1}`}
               >
                 {skill}
               </div>

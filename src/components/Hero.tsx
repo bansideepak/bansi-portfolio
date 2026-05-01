@@ -10,7 +10,7 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="h-screen relative overflow-hidden"
+      className="h-[100dvh] relative overflow-hidden"
       aria-label="Hero"
     >
       <h1 className="sr-only">Bansi Deepak Bollapally — AI Engineer</h1>
