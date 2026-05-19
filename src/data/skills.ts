@@ -16,7 +16,6 @@ export const skills: string[] = [
   "LangChain",
   "Google Gemini",
   "OpenAI API",
-  "RAG Pipelines",
   "Pinecone",
   "ChromaDB",
   "Hugging Face",
