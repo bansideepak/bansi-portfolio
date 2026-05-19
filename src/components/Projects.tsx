@@ -39,12 +39,7 @@ export function Projects() {
                 <p className="text-gray-400 text-sm mb-6 min-h-[5rem]">
                   {project.description}
                 </p>
-                <span
-                  className="text-matrix-dark/40 border border-matrix/10 px-4 py-2 text-sm uppercase inline-block cursor-not-allowed select-none"
-                  aria-label="Coming soon"
-                >
-                  [Coming Soon]
-                </span>
+
               </div>
             </div>
           ))}

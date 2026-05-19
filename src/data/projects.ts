@@ -10,33 +10,41 @@ export const projects: Project[] = [
   {
     id: "SYS_01",
     title: "ASKENCE Platform",
-    tags: ["LangChain", "FastAPI", "Gemini"],
+    tags: ["React 19", "FastAPI", "LangChain", "Gemini", "PostgreSQL", "Docker"],
     description:
-      "Enterprise Text-to-SQL & Analytics Platform. Advanced LLM-based text-to-SQL RAG using LangChain with schema injection for accurate queries. Built a SQL Validation & Rewriting Engine.",
+      "AI-powered conversational analytics dashboard — managers ask in plain English and get instant charts and summaries. Dual-model LangChain architecture with Gemini, auto-selecting Plotly chart types, smart aggregation, and React 19 chat UI.",
     href: "#",
   },
   {
     id: "SYS_02",
-    title: "Dynamic Viz Engine",
-    tags: ["React", "TypeScript", "Vite"],
+    title: "ISVT Ground Station",
+    tags: ["React", "TypeScript", "Express", "Cesium", "PostgreSQL", "Docker"],
     description:
-      "Classifies output types (categorical/time-series/numerical) and renders appropriate visualizations. Containerized full-stack application with Docker. Integrated FastAPI backend.",
+      "Full-stack real-time LEO satellite tracking app with 3D Cesium globe rendering, SGP4 orbital propagation, Redis pub/sub telemetry, and containerized deployment. [In Progress]",
     href: "#",
   },
   {
     id: "SYS_03",
-    title: "AI Call Automation",
-    tags: ["React", "Python", "OpenAI"],
+    title: "Neurom.com",
+    tags: ["Next.js 15", "Sanity CMS", "GSAP", "Tailwind CSS v4"],
     description:
-      "Tool for comparing OpenAI models with structured prompts. Implemented Twilio integration with STT and TTS for automated conversational flows. Deployed via AWS Bedrock.",
+      "Company landing page with headless CMS content management, Next.js 15, Sanity CMS for dynamic content, GSAP & Framer Motion animations, and Tailwind CSS v4 styling.",
     href: "#",
   },
   {
     id: "SYS_04",
-    title: "SEARCHLIFT360",
-    tags: ["Next.js 14", "Docker", "AWS Amplify"],
+    title: "AI Call Automation",
+    tags: ["React", "Python", "OpenAI", "Twilio", "AWS Bedrock"],
     description:
-      "Asynchronous AI SEO Auditing Engine. Architected a scalable asynchronous crawling engine using FastAPI Background Tasks, enabling parallel deep-site audits.",
+      "AI-powered call automation tool with OpenAI model comparison, Twilio STT/TTS integration for conversational flows, and scalable deployment via AWS Bedrock and EC2.",
+    href: "#",
+  },
+  {
+    id: "SYS_05",
+    title: "SEARCHLIFT360",
+    tags: ["Next.js 14", "FastAPI", "Docker", "AWS Amplify"],
+    description:
+      "Asynchronous AI SEO auditing engine with FastAPI Background Tasks for parallel deep-site audits, hybrid DOM + generative AI analysis, and automated PDF report generation.",
     href: "#",
   },
 ];

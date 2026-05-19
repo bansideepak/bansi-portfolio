@@ -15,16 +15,18 @@ export function About() {
           </ScrollReveal>
           <ScrollReveal stagger={2}>
             <p>
-              <span className="text-matrix">Role:</span> AI Engineer
+              <span className="text-matrix">Role:</span> Full Stack Developer (Web + AI)
             </p>
           </ScrollReveal>
           <ScrollReveal stagger={3}>
             <p>
-              <span className="text-matrix">Summary:</span> Innovative AI
-              Engineer specializing in Generative AI Architectures, LLM
-              Reasoning Engines, and Conversational AI Systems. Experienced in
-              designing and deploying production-grade AI platforms using
-              FastAPI, microservices, and modern tech stacks.
+              <span className="text-matrix">Summary:</span> Full Stack
+              Developer specializing in building end-to-end web applications and
+              integrating AI/ML systems. Proficient in React, Next.js, Node.js,
+              and TypeScript for front-end and back-end development, with deep
+              expertise in LLM frameworks, LangChain, RAG architectures, and
+              deploying production-grade AI platforms using FastAPI and
+              microservices.
             </p>
           </ScrollReveal>
           <p className="text-matrix-dark mt-6 mb-2 reveal stagger-4">
@@ -42,6 +44,13 @@ export function About() {
           </div>
         </div>
         <p className="mt-8 text-matrix typing-cursor">guest@system: ~$</p>
+        <a
+          href="/resume.pdf"
+          download
+          className="mt-4 inline-block font-mono text-xs text-matrix border border-matrix/30 px-6 py-2 uppercase hover:bg-matrix/10 transition-colors duration-200"
+        >
+          $ download resume
+        </a>
       </TerminalCard>
     </section>
   );

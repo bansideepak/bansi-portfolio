@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const titles = [
-  "ai engineer",
   "full stack developer",
+  "web + ai engineer",
   "creator",
   "artist",
 ];

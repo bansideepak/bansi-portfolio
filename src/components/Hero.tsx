@@ -13,7 +13,7 @@ export function Hero() {
       className="h-[100dvh] relative overflow-hidden"
       aria-label="Hero"
     >
-      <h1 className="sr-only">Bansi Deepak Bollapally — AI Engineer</h1>
+      <h1 className="sr-only">Bansi Deepak Bollapally — Full Stack Developer (Web + AI)</h1>
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
@@ -42,7 +42,7 @@ export function Hero() {
           <RotatingTitle />
         </div>
           <p className="font-mono text-sm md:text-xl text-matrix/80 md:max-w-md text-right cursor-default glow-text neon-hover">
-          $ whoami <span className="text-matrix-light">→</span> ai engineer
+          $ whoami <span className="text-matrix-light">→</span> full stack (web + ai)
         </p>
       </div>
 
