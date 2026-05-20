@@ -3,9 +3,13 @@ import { MarqueeBar } from "./MarqueeBar";
 import { SocialSidebar } from "./SocialSidebar";
 import { MatrixRain } from "./MatrixRain";
 import { useMouseParallax } from "../hooks/useMouseParallax";
+import { useTextScramble } from "../hooks/useTextScramble";
 
 export function Hero() {
   const parallax = useMouseParallax(20, 20);
+  const scramble = useTextScramble(
+    "full stack developer.crafting \nintelligent systems with web + ai.",
+  );
 
   return (
     <section
@@ -13,7 +17,9 @@ export function Hero() {
       className="h-[100dvh] relative overflow-hidden"
       aria-label="Hero"
     >
-      <h1 className="sr-only">Bansi Deepak Bollapally — Full Stack Developer (Web + AI)</h1>
+      <h1 className="sr-only">
+        Bansi Deepak Bollapally — Full Stack Developer (Web + AI)
+      </h1>
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
@@ -41,8 +47,12 @@ export function Hero() {
         <div className="font-mono text-xl md:text-3xl font-normal text-matrix tracking-tight text-left cursor-default glow-text neon-hover md:w-[30%]">
           <RotatingTitle />
         </div>
-          <p className="font-mono text-sm md:text-xl text-matrix/80 md:max-w-md text-right cursor-default glow-text neon-hover">
-          $ whoami <span className="text-matrix-light">→</span> full stack (web + ai)
+        <p
+          className="font-mono text-sm md:text-xl text-matrix/80 text-right cursor-default glow-text neon-hover whitespace-pre-line md:ml-auto md:w-fit"
+          onMouseEnter={scramble.start}
+          onMouseLeave={scramble.stop}
+        >
+          {scramble.display}
         </p>
       </div>
 
