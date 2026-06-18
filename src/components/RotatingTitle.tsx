@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 
 const titles = [
   "full stack developer",
@@ -20,18 +19,10 @@ export function RotatingTitle() {
 
   return (
     <div className="relative inline-block overflow-hidden align-bottom">
-      <AnimatePresence mode="wait">
-        <motion.span
-          key={index}
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -30 }}
-          transition={{ duration: 0.5, ease: "easeInOut" }}
-          className="inline-block"
-        >
-          {titles[index]}
-        </motion.span>
-      </AnimatePresence>
+      {/* key forces a remount each change, restarting the CSS enter animation */}
+      <span key={index} className="rotating-title">
+        {titles[index]}
+      </span>
     </div>
   );
 }

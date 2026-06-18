@@ -123,10 +123,27 @@ button:focus-visible {
   100% { transform: translateX(-50%); }
 }
 
+.rotating-title {
+  display: inline-block;
+  animation: rotating-title-in 0.5s ease-in-out;
+}
+
+@keyframes rotating-title-in {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .marquee-scroll,
   .animate-kenburns,
-  .animate-glow-pulse {
+  .animate-glow-pulse,
+  .rotating-title {
     animation: none !important;
   }
   .reveal {
