@@ -21,12 +21,14 @@ export function About() {
           <ScrollReveal stagger={3}>
             <p>
               <span className="text-matrix">Summary:</span> Full Stack
-              Developer specializing in building end-to-end web applications and
-              integrating AI/ML systems. Proficient in React, Next.js, Node.js,
-              and TypeScript for front-end and back-end development, with deep
-              expertise in LLM frameworks, LangChain, RAG architectures, and
-              deploying production-grade AI platforms using FastAPI and
-              microservices.
+              Developer and AI Engineer specializing in building end-to-end web
+              applications and integrating AI/ML and Computer Vision systems.
+              Proficient in React, Next.js, Node.js, and TypeScript for
+              front-end and back-end development, with deep expertise in LLM
+              frameworks, LangChain, RAG architectures, and vector search.
+              Experienced in deploying production-grade AI platforms using
+              FastAPI, Celery, and microservices, with asynchronous processing
+              and real-time inference at scale.
             </p>
           </ScrollReveal>
           <p className="text-matrix-dark mt-6 mb-2 reveal stagger-4">

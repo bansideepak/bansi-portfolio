@@ -24,8 +24,26 @@ export function Credentials() {
 
         <p className="text-matrix-dark mb-4">$ cat certifications.log</p>
         <ul className="text-gray-300 space-y-2 list-disc list-inside pl-4 mb-4 reveal stagger-2">
-          <li>Oracle Cloud Infrastructure 2023 Certified Associate</li>
-          <li>Postman API Fundamentals Student Expert</li>
+          <li>
+            <a
+              href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=B68FCC0253F18758C640802558E542169247F8910E4D24EA865CAAA5F4EC4CA0"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="neon-link hover:text-matrix-light"
+            >
+              Oracle Cloud Infrastructure 2023 Certified Associate
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://badges.parchment.com/public/assertions/WBYKt7SFT_-y9xysk8eU3g"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="neon-link hover:text-matrix-light"
+            >
+              Postman API Fundamentals Student Expert
+            </a>
+          </li>
         </ul>
         <ScrollReveal>
           <p className="mt-8 text-matrix typing-cursor">guest@system: ~$</p>

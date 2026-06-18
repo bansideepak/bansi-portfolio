@@ -28,9 +28,13 @@ Hero-cropped.png
 hero.png
 generate_ascii.py
 ASCII-VIDEO-GUIDE.md
+# Local-only source assets (kept on disk, not tracked in git)
 public/hero-bg.png
 public/Hero-final.png
 public/Hero-smooth.png
+public/Hero-smooth2.png
+public/Hero-Potrait.png
+public/favicon.svg
 public/1777407368853181.mov
 public/Hero-video-3d.webm
 IMPLEMENTATION_PLAN.md

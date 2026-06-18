@@ -23,23 +23,35 @@ export function Experience() {
         <ul className="text-gray-300 space-y-3 list-none pl-4 mb-4 reveal stagger-2">
           <li className="flex items-start gap-2">
             <span className="text-matrix mt-1">▸</span>
-            <span>Architected end-to-end RAG systems with schema-aware retrieval for high-accuracy LLM responses</span>
+            <span>Architected end-to-end RAG systems using schema-aware retrieval, enabling high-accuracy LLM responses for enterprise data sources</span>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-matrix mt-1">▸</span>
-            <span>Built a multi-model inference gateway in FastAPI, routing between Gemini and OpenAI based on task complexity</span>
+            <span>Built a dynamic multi-model inference gateway in FastAPI, routing traffic between Google Gemini and OpenAI based on task complexity, latency budget, and cost-efficiency</span>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-matrix mt-1">▸</span>
-            <span>Led full-stack development of React/Next.js dashboards with async inference queues and real-time monitoring</span>
+            <span>Built production computer-vision pipelines — real-time face detection, deep face-embedding models, and pgvector similarity search — powering a multi-tenant biometric attendance platform with AES-256-GCM-encrypted PII</span>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-matrix mt-1">▸</span>
-            <span>Delivered full-stack web applications across multiple projects — building React/Next.js frontends, FastAPI/Express backends, and integrating AI systems end-to-end</span>
+            <span>Engineered real-time geospatial and signal-processing systems — live WebGL satellite-orbit tracking and SDR pipelines (FFT, FM demodulation) — on event-driven Node.js/TypeScript microservices</span>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-matrix mt-1">▸</span>
-            <span>Optimized LLM performance pipelines — benchmarked inference cost, throughput, caching, and structured prompting</span>
+            <span>Reduced hallucinations by designing enterprise-grade guardrails, including policy-driven validation, tool-calling restrictions, and structured output enforcement</span>
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="text-matrix mt-1">▸</span>
+            <span>Led full-stack development of internal AI pilots — React/Next.js dashboards, asynchronous inference queues, and real-time task monitoring</span>
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="text-matrix mt-1">▸</span>
+            <span>Delivered full-stack web applications across multiple client projects — building React/Next.js frontends, FastAPI/Express backends, and integrating AI systems end-to-end</span>
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="text-matrix mt-1">▸</span>
+            <span>Optimized LLM performance pipelines — benchmarking inference cost, throughput, and caching layers, and implementing structured prompting frameworks</span>
           </li>
         </ul>
         <ScrollReveal>

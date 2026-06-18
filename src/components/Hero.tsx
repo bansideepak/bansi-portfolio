@@ -31,7 +31,7 @@ export function Hero() {
         <div
           className="absolute inset-0 animate-kenburns hero-bg-image"
           style={{
-            backgroundImage: "url(/Hero-Potrait.png)",
+            backgroundImage: "url(/Hero-Potrait.webp)",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
             opacity: 0.6,

@@ -19,7 +19,9 @@ export function MatrixRain(_props: MatrixRainProps) {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    let animationId: number;
+    let animationId: number | null = null;
+    let lastFrame = 0;
+    const frameInterval = 1000 / 30;
     let fontSize = window.innerWidth < 768 ? 14 : 22;
 
     function resize() {
@@ -47,8 +49,12 @@ export function MatrixRain(_props: MatrixRainProps) {
 
     initDrops();
 
-    function draw() {
+    function draw(now: number) {
+      animationId = requestAnimationFrame(draw);
+
       if (!ctx || !canvas) return;
+      if (now - lastFrame < frameInterval) return;
+      lastFrame = now;
 
       ctx.fillStyle = "rgba(0, 0, 0, 0.04)";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -76,8 +82,19 @@ export function MatrixRain(_props: MatrixRainProps) {
           drops[i].pos += drop.speed;
         }
       }
+    }
 
-      animationId = requestAnimationFrame(draw);
+    function start() {
+      if (animationId === null) {
+        animationId = requestAnimationFrame(draw);
+      }
+    }
+
+    function stop() {
+      if (animationId !== null) {
+        cancelAnimationFrame(animationId);
+        animationId = null;
+      }
     }
 
     function handleResize() {
@@ -89,10 +106,20 @@ export function MatrixRain(_props: MatrixRainProps) {
     }
 
     window.addEventListener("resize", handleResize);
-    draw();
+
+    // Only animate while the canvas is on-screen (i.e. the hero is in view).
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) start();
+        else stop();
+      },
+      { threshold: 0 },
+    );
+    observer.observe(canvas);
 
     return () => {
-      cancelAnimationFrame(animationId);
+      stop();
+      observer.disconnect();
       window.removeEventListener("resize", handleResize);
     };
   }, []);

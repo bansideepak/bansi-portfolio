@@ -9,6 +9,14 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: "SYS_01",
+    title: "CORAX — AI Face-Recognition Attendance Platform",
+    tags: ["FastAPI", "PostgreSQL/pgvector", "Celery", "InsightFace", "MediaPipe", "React", "React Native", "Docker"],
+    description:
+      "Multi-tenant face-recognition attendance platform — async FastAPI backend (81 REST endpoints), React + TypeScript dashboard, and React Native app in a 7-service Docker stack. Real-time pipeline pairing MediaPipe 468-landmark detection with InsightFace 512-dim embeddings and pgvector search; Celery video processing and AES-256-GCM/JWT security. [In Progress]",
+    href: "#",
+  },
+  {
+    id: "SYS_02",
     title: "ASKENCE Platform",
     tags: ["React 19", "FastAPI", "LangChain", "Gemini", "PostgreSQL", "Docker"],
     description:
@@ -16,7 +24,7 @@ export const projects: Project[] = [
     href: "#",
   },
   {
-    id: "SYS_02",
+    id: "SYS_03",
     title: "ISVT Ground Station",
     tags: ["React", "TypeScript", "Express", "Cesium", "PostgreSQL", "Docker"],
     description:
@@ -24,7 +32,7 @@ export const projects: Project[] = [
     href: "#",
   },
   {
-    id: "SYS_03",
+    id: "SYS_04",
     title: "Neurom.com",
     tags: ["Next.js 15", "Sanity CMS", "GSAP", "Tailwind CSS v4"],
     description:
@@ -32,7 +40,7 @@ export const projects: Project[] = [
     href: "#",
   },
   {
-    id: "SYS_04",
+    id: "SYS_05",
     title: "AI Call Automation",
     tags: ["React", "Python", "OpenAI", "Twilio", "AWS Bedrock"],
     description:
@@ -40,7 +48,7 @@ export const projects: Project[] = [
     href: "#",
   },
   {
-    id: "SYS_05",
+    id: "SYS_06",
     title: "SEARCHLIFT360",
     tags: ["Next.js 14", "FastAPI", "Docker", "AWS Amplify"],
     description:
