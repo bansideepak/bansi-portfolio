@@ -47,7 +47,7 @@ export function About() {
         </div>
         <p className="mt-8 text-matrix typing-cursor">guest@system: ~$</p>
         <a
-          href="/resume.pdf"
+          href="/Bollapally_Bansideepak_Resume.pdf"
           download
           className="mt-4 inline-block font-mono text-xs text-matrix border border-matrix/30 px-6 py-2 uppercase hover:bg-matrix/10 transition-colors duration-200"
         >
