@@ -5,7 +5,6 @@ import { Projects } from "./components/Projects";
 import { Credentials } from "./components/Credentials";
 import { Contact } from "./components/Contact";
 import { useScrollReveal } from "./hooks/useScrollReveal";
-import { Analytics } from "@vercel/analytics/react";
 
 export default function App() {
   useScrollReveal();
@@ -23,7 +22,6 @@ export default function App() {
       <Credentials />
       <Contact />
     </main>
-    <Analytics />
     </>
   );
 }

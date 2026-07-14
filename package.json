@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "npm run build && wrangler pages deploy --project-name=bansideepak"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.2.4",
@@ -15,11 +16,11 @@
     "@vitejs/plugin-react": "^6.0.1",
     "tailwindcss": "^4.2.4",
     "typescript": "~6.0.2",
-    "vite": "^8.0.10"
+    "vite": "^8.0.10",
+    "wrangler": "^4.110.0"
   },
   "dependencies": {
     "@iconify/react": "^6.0.2",
-    "@vercel/analytics": "^2.0.1",
     "react": "^19.2.5",
     "react-dom": "^19.2.5"
   }
