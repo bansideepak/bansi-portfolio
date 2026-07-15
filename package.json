@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "deploy": "npm run build && wrangler pages deploy --project-name=bansideepak"
+    "deploy": "npm run build && wrangler deploy"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.2.4",
