@@ -1,0 +1,200 @@
+%%%%%%%%%%%%%%%%
+% Aligned AltaCV Resume - Bollapally Bansi Deepak
+%%%%%%%%%%%%%%%%
+\documentclass[11pt,a4paper,ragged2e,withhyper]{altacv}
+\geometry{left=1.35cm,right=1.35cm,top=2cm,bottom=2cm,columnsep=0.65cm}
+\usepackage{paracol}
+\usepackage{needspace}
+\usepackage{setspace}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[default]{lato}
+\else
+  \usepackage{fontspec}
+  \setmainfont{Lato}
+\fi
+\definecolor{VividPurple}{HTML}{6a329f}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{tagline}{VividPurple}
+\colorlet{heading}{VividPurple}
+\colorlet{headingrule}{VividPurple}
+\colorlet{accent}{VividPurple}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+\renewcommand{\cvItemMarker}{{\small\textbullet}}
+\renewcommand{\cvRatingMarker}{\faCircle}
+\makeatletter
+\newcommand{\portfolio}[1]{{\color{emphasis}\footnotesize\faGlobe}\hspace{0.5em}\href{#1}{Portfolio}}
+\makeatother
+\AtBeginEnvironment{itemize}{%
+  \small
+  \setlength{\itemsep}{1.2pt}%
+  \setlength{\parsep}{0pt}%
+  \setlength{\parskip}{0pt}%
+  \setlength{\topsep}{2pt}%
+}
+\AtBeginEnvironment{enumerate}{%
+  \small
+  \setlength{\itemsep}{1.2pt}%
+  \setlength{\parsep}{0pt}%
+  \setlength{\parskip}{0pt}%
+  \setlength{\topsep}{2pt}%
+}
+\newcommand{\projecttitle}[1]{%
+  \par\smallskip
+  \needspace{4\baselineskip}%
+  {\textcolor{VividPurple}{\normalsize\bfseries #1}}\par
+}
+\newcommand{\projectstack}[1]{%
+  {\footnotesize\itshape #1}\par\vspace{0.5mm}
+}
+\newcommand{\projectsep}{%
+  \par\vspace{1mm}
+  {\color{gray!35}\noindent\makebox[\linewidth]{\dotfill}}
+  \par\vspace{1mm}
+}
+\begin{document}
+\name{Bollapally Bansi Deepak}
+\tagline{AI Engineer / Full Stack Developer}
+\personalinfo{%
+  \phone{+91-7330056795}
+  \email{bansideepak2000@gmail.com}
+  \location{Hyderabad, India}
+  \linkedin{BansiDeepak}
+  \portfolio{https://bansideepak.pages.dev/}
+}
+\makecvheader
+\columnratio{0.50}
+\begin{paracol}{2}
+\cvsection{PROFESSIONAL SUMMARY}
+Full Stack Developer and AI Engineer specializing in building end-to-end web applications and integrating AI/ML and \textbf{Computer Vision} systems. Proficient in \textbf{React}, \textbf{Next.js}, \textbf{Node.js}, and \textbf{TypeScript} for front-end and back-end development, with deep expertise in \textbf{LLM frameworks}, \textbf{LangChain}, \textbf{RAG Architectures}, and \textbf{vector search}. Experienced in deploying production-grade AI platforms using \textbf{FastAPI}, \textbf{Celery}, and \textbf{microservices}, with asynchronous processing and real-time inference at scale.
+\par\smallskip
+\cvsection{PROFESSIONAL EXPERIENCE}
+\cvevent{AI Engineer}{Neurom Innovations}{Dec 2024 -- Present}{Hyderabad, India}
+\begin{itemize}
+\item Architected end-to-end RAG systems using schema-aware retrieval, enabling high-accuracy LLM responses for enterprise data sources.
+\item Built a dynamic multi-model inference gateway in \textbf{FastAPI} that intelligently routes traffic between \textbf{Google Gemini} and \textbf{OpenAI} based on task complexity, latency budget, and cost-efficiency.
+\item Built production \textbf{computer-vision} pipelines --- real-time face detection, deep face-embedding models, and \textbf{pgvector} similarity search --- powering a multi-tenant biometric attendance platform with \textbf{AES-256-GCM}-encrypted PII.
+\item Engineered real-time \textbf{geospatial} and \textbf{signal-processing} systems --- live \textbf{WebGL} satellite-orbit tracking and \textbf{SDR} pipelines (FFT, FM demodulation) --- on \textbf{event-driven} Node.js/TypeScript microservices.
+\item Reduced hallucinations by designing enterprise-grade guardrails, including policy-driven validation, tool-calling restrictions, and structured output enforcement.
+\item Led full-stack development of internal AI pilots, including React/Next.js dashboards, asynchronous inference queues, and real-time task monitoring.
+\item Delivered full-stack web applications across multiple client projects --- building React/Next.js frontends, FastAPI/Express backends, and integrating AI systems end-to-end.
+\item Optimized LLM performance pipelines, benchmarking inference cost, throughput, caching layers, and implementing structured prompting frameworks.
+\end{itemize}
+\par\smallskip
+\cvsection{TECHNICAL SKILLS}
+\begin{spacing}{1.4}
+% Frontend & UI
+\cvtag{React.js}
+\cvtag{Next.js}
+\cvtag{React Native}
+\cvtag{Expo}
+\cvtag{TypeScript}
+\cvtag{JavaScript}
+\cvtag{Vite}
+\cvtag{Tailwind CSS}
+\cvtag{React Query}
+\cvtag{Zustand}
+\cvtag{Recharts}
+\cvtag{Cesium}
+\cvtag{WebGL}
+\cvtag{Mapbox}
+\par\smallskip
+% Backend & Runtime
+\cvtag{Node.js}
+\cvtag{Express}
+\cvtag{FastAPI}
+\cvtag{Python}
+\cvtag{Celery}
+\cvtag{Redis}
+\cvtag{nginx}
+\cvtag{Streamlit}
+\par\smallskip
+% AI / ML / Computer Vision
+\cvtag{Google Gemini}
+\cvtag{OpenAI API}
+\cvtag{LangChain}
+\cvtag{RAG Pipelines}
+\cvtag{Computer Vision}
+\cvtag{MediaPipe}
+\cvtag{InsightFace}
+\cvtag{Vector Search}
+\cvtag{Prompt Engineering}
+\cvtag{Text-to-SQL}
+\par\smallskip
+% Data & Signal Processing
+\cvtag{Pandas}
+\cvtag{NumPy}
+\cvtag{Plotly}
+\cvtag{ReportLab}
+\cvtag{SDR/DSP}
+\cvtag{satellite.js}
+\par\smallskip
+% Databases & DevOps
+\cvtag{PostgreSQL}
+\cvtag{pgvector}
+\cvtag{Docker}
+\cvtag{Kubernetes}
+\cvtag{AWS Amplify}
+\cvtag{AWS EC2}
+\cvtag{Git}
+\cvtag{CI/CD}
+\par\smallskip
+% Security & Auth
+\cvtag{JWT}
+\cvtag{AES-256 Encryption}
+\cvtag{Rate Limiting}
+\cvtag{Multi-tenant Isolation}
+\par\smallskip
+\end{spacing}
+\needspace{5\baselineskip}
+\cvsection{CERTIFICATIONS}
+\begin{enumerate}
+  \item \href{https://catalog-education.oracle.com/ords/certview/sharebadge?id=B68FCC0253F18758C640802558E542169247F8910E4D24EA865CAAA5F4EC4CA0}{Oracle Cloud Infrastructure 2023 Certified Associate}
+  \item \href{https://badges.parchment.com/public/assertions/WBYKt7SFT_-y9xysk8eU3g}{Postman API Fundamentals Student Expert}
+\end{enumerate}
+\par\smallskip
+\needspace{4\baselineskip}
+\cvsection{EDUCATION}
+\cvevent{B.Tech, Computer Science \& Engineering}{Talla Padmavathi College of Engineering}{2021 -- 2025}{}
+\switchcolumn
+\cvsection{KEY PROJECTS}
+\projecttitle{CORAX -- AI Face-Recognition Attendance Platform~{\normalfont\itshape\footnotesize\color{LightGrey}(In Progress)}}
+\projectstack{FastAPI, PostgreSQL/pgvector, Celery, InsightFace, MediaPipe, React, React Native, Docker}
+\begin{itemize}
+\item Architecting a multi-tenant face-recognition attendance platform end-to-end --- an async \textbf{FastAPI} backend (\textbf{81 REST endpoints}, 15 data models), a \textbf{React + TypeScript} dashboard, and a \textbf{React Native} mobile app --- containerized as a \textbf{7-service Docker} stack (Postgres/pgvector, Redis, Celery, nginx).
+\item Engineered a real-time face-recognition pipeline pairing client-side \textbf{MediaPipe} 468-landmark detection (7\,Hz) with a server-side two-stage stack --- an \textbf{InsightFace SCRFD} detector plus a \textbf{512-dim deep face-embedding model} --- and \textbf{pgvector} cosine similarity for sub-second identity matching.
+\item Built an asynchronous video-processing pipeline on \textbf{Celery + Redis} that returns \textbf{HTTP 202} instantly and runs frame sampling and inference off the request path, keeping the API responsive under heavy media load.
+\item Implemented production-grade security --- \textbf{AES-256-GCM} encryption of PII/biometric data, \textbf{JWT} auth with refresh-token rotation and revocation, rate limiting, account lockout, and JWT-enforced tenant isolation.
+\item Developed a data-rich \textbf{React + TypeScript} dashboard with \textbf{React Query} (90+ data hooks), \textbf{Zustand}, and \textbf{Recharts} --- featuring drill-down navigation, live attendance status, and CSV/PDF reporting.
+\item Delivered a cross-platform \textbf{React Native (Expo)} app for on-site capture --- native-camera face enrollment, offline-aware sync, biometric login, and push notifications.
+\end{itemize}
+\projectsep
+\projecttitle{ASKENCE -- Enterprise Text-to-SQL \& Analytics Platform}
+\projectstack{React 19, TypeScript, FastAPI, LangChain, Gemini, PostgreSQL, Docker}
+\begin{itemize}
+\item Designed an advanced Text-to-SQL RAG system using \textbf{LangChain} and \textbf{Schema Injection} to generate accurate and executable SQL queries from natural language.
+\item Built a \textbf{SQL Validation \& Rewriting Engine} that detects large datasets and automatically produces optimized, aggregated queries.
+\item Developed a dynamic visualization engine using \textbf{React + TypeScript + Vite} that classifies output types and renders appropriate visualizations.
+\item Deployed system for \textbf{real-world enterprise} data analytics, enabling business users to query operational data through natural language.
+\end{itemize}
+\projectsep
+\projecttitle{ISVT GROUND STATION -- Real-Time Satellite Tracking \& SDR Platform~{\normalfont\itshape\footnotesize\color{LightGrey}(In Progress)}}
+\projectstack{React, TypeScript, Node/Express, PostgreSQL, Redis, Cesium, satellite.js, Python, RTL-SDR}
+\begin{itemize}
+\item Building a live LEO-satellite visualizer that renders real-time orbits via client-side \textbf{SGP4} propagation (\textbf{satellite.js}) in a \textbf{Cesium/WebGL} 3D scene, paired with a 2D \textbf{Mapbox} ground track and sub-second position updates.
+\item Engineered an \textbf{event-driven} Node/Express + \textbf{TypeScript} backend with a central \textbf{EventBus} and pluggable \textbf{connectors} that ingest TLE feeds from \textbf{CelesTrak} and \textbf{Space-Track} into \textbf{PostgreSQL} with \textbf{Redis} caching and a 2-hour refresh cron.
+\item Developed a \textbf{Python SDR} signal pipeline (\textbf{RTL-SDR}) performing \textbf{FM demodulation}, \textbf{FFT} spectrum analysis, and live \textbf{waterfall} rendering streamed to the React frontend in real time.
+\item Architected a \textbf{TypeScript monorepo} (npm workspaces) with a shared type ontology, raw-SQL migrations, and a \textbf{versioned REST API} (strict-mode, consistent response envelope); implemented orbital math --- pass prediction, \textbf{Doppler} shift, and topocentric elevation/azimuth across ECI/ECEF/geodetic frames.
+\end{itemize}
+\projectsep
+\projecttitle{SEARCHLIFT360 -- Asynchronous AI SEO Auditing Engine}
+\projectstack{FastAPI, Python, Docker, Next.js 14, AWS Amplify}
+\begin{itemize}
+\item Architected a scalable asynchronous crawling engine using \textbf{FastAPI Background Tasks}, enabling parallel deep-site audits with zero UI blocking.
+\item Developed a unique hybrid analysis pipeline combining \textbf{rule-based DOM Checks} with \textbf{generative AI insights} for content strategy.
+\item Automated the creation of client-ready PDF audit reports using \textbf{ReportLab}, generating structured, visual SEO health summaries.
+\end{itemize}
+\end{paracol}
+\end{document}
