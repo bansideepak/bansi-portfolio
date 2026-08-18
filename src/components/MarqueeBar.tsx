@@ -9,9 +9,9 @@ export function MarqueeBar() {
 
   const items: { text: string; href?: string }[] = [
     {
-      text: "Hi, I am Bansi Deepak Bollapally, a Full Stack Developer (Web + AI) based in India.",
+      text: "Hi, I am Bansi Deepak Bollapally, a Full Stack AI Engineer based in India.",
     },
-    { text: "building scalable AI systems & platforms" },
+    { text: "building tested, production web systems with AI inside" },
     {
       text: "engineering @ Neurom",
       href: "https://www.neurominnovations.com/",

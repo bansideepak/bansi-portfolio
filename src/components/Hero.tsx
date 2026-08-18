@@ -8,7 +8,7 @@ import { useTextScramble } from "../hooks/useTextScramble";
 export function Hero() {
   const parallax = useMouseParallax(20, 20);
   const scramble = useTextScramble(
-    "full stack developer.crafting \nintelligent systems with web + ai.",
+    "full stack ai engineer.shipping tested, production \nweb systems with ai inside.",
   );
 
   return (
@@ -18,7 +18,7 @@ export function Hero() {
       aria-label="Hero"
     >
       <h1 className="sr-only">
-        Bansi Deepak Bollapally — Full Stack Developer (Web + AI)
+        Bansi Deepak Bollapally — Full Stack AI Engineer
       </h1>
       <div
         className="absolute inset-0 pointer-events-none"

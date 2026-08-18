@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 
 const titles = [
-  "full stack developer",
-  "web + ai engineer",
+  "full stack ai engineer",
+  "test-first builder",
   "creator",
   "artist",
 ];

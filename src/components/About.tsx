@@ -15,20 +15,21 @@ export function About() {
           </ScrollReveal>
           <ScrollReveal stagger={2}>
             <p>
-              <span className="text-matrix">Role:</span> Full Stack Developer (Web + AI)
+              <span className="text-matrix">Role:</span> Full Stack AI Engineer
             </p>
           </ScrollReveal>
           <ScrollReveal stagger={3}>
             <p>
-              <span className="text-matrix">Summary:</span> Full Stack
-              Developer and AI Engineer specializing in building end-to-end web
-              applications and integrating AI/ML and Computer Vision systems.
-              Proficient in React, Next.js, Node.js, and TypeScript for
-              front-end and back-end development, with deep expertise in LLM
-              frameworks, LangChain, RAG architectures, and vector search.
-              Experienced in deploying production-grade AI platforms using
-              FastAPI, Celery, and microservices, with asynchronous processing
-              and real-time inference at scale.
+              <span className="text-matrix">Summary:</span> Full Stack AI
+              Engineer with 3.5 years of hands-on experience building
+              production web applications end-to-end: React/Next.js frontends,
+              Node.js/TypeScript and Python/FastAPI backends, and PostgreSQL
+              data layers. Writes tests first (Jest, Vitest, Playwright) and
+              treats untested code as unfinished. Modernized a legacy .NET
+              system into a fully tested TypeScript platform, and ships AI
+              features that survive production: RAG pipelines, multi-model
+              routing, and guardrails built on LangChain and the OpenAI/Gemini
+              SDKs.
             </p>
           </ScrollReveal>
           <p className="text-matrix-dark mt-6 mb-2 reveal stagger-4">
@@ -47,7 +48,7 @@ export function About() {
         </div>
         <p className="mt-8 text-matrix typing-cursor">guest@system: ~$</p>
         <a
-          href="/Bollapally_Bansideepak_Resume.pdf"
+          href="/Bansi-Deepak-Bollapally.pdf"
           download
           className="mt-4 inline-block font-mono text-xs text-matrix border border-matrix/30 px-6 py-2 uppercase hover:bg-matrix/10 transition-colors duration-200"
         >
