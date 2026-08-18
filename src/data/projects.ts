@@ -17,7 +17,7 @@ export const projects: Project[] = [
     title: "Group-Booking & Travel Platform",
     subtitle: "Legacy .NET Modernization",
     status: "In Progress",
-    tags: ["TypeScript", "NestJS", "PostgreSQL/Prisma", "Next.js", "Playwright", "Docker"],
+    tags: ["TypeScript", "NestJS", "PostgreSQL/Prisma", "Next.js"],
     summary:
       "Rebuilt an undocumented .NET travel system as an API-first TypeScript platform — 110 REST endpoints over a 37-model schema.",
     highlights: [
@@ -31,7 +31,7 @@ export const projects: Project[] = [
     id: "SYS_02",
     title: "CORAX",
     subtitle: "AI Face-Recognition Attendance Platform",
-    tags: ["FastAPI", "pgvector", "Celery", "InsightFace", "React Native", "Docker"],
+    tags: ["FastAPI", "pgvector", "Celery", "React Native", "Docker"],
     summary:
       "Multi-tenant attendance platform — async FastAPI backend of 66 endpoints, React dashboard and React Native app in a six-service Docker stack.",
     highlights: [
@@ -45,7 +45,7 @@ export const projects: Project[] = [
     id: "SYS_03",
     title: "ASKENCE",
     subtitle: "Enterprise Text-to-SQL & Analytics",
-    tags: ["React 19", "TypeScript", "FastAPI", "LangChain", "Gemini", "PostgreSQL"],
+    tags: ["React 19", "FastAPI", "LangChain", "Gemini", "PostgreSQL"],
     summary:
       "Enterprise Text-to-SQL on LangChain — chose schema grounding over RAG retrieval after evaluating both.",
     highlights: [
@@ -60,7 +60,7 @@ export const projects: Project[] = [
     title: "ISVT Ground Station",
     subtitle: "Real-Time Satellite Tracking",
     status: "In Progress",
-    tags: ["React", "TypeScript", "Express", "Cesium", "PostgreSQL", "Docker"],
+    tags: ["React", "TypeScript", "Cesium", "PostgreSQL"],
     summary:
       "Live LEO satellite tracking on a 3D Cesium globe, driven by SGP4 orbital propagation.",
     highlights: [
