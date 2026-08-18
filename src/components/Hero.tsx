@@ -8,7 +8,7 @@ import { useTextScramble } from "../hooks/useTextScramble";
 export function Hero() {
   const parallax = useMouseParallax(20, 20);
   const scramble = useTextScramble(
-    "full stack ai engineer.shipping tested, production \nweb systems with ai inside.",
+    "full stack ai engineer.shipping tested, \nproduction web systems with ai inside.",
   );
 
   return (
