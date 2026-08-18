@@ -1,11 +1,6 @@
 import { useState, useEffect } from "react";
 
-const titles = [
-  "full stack ai engineer",
-  "test-first builder",
-  "creator",
-  "artist",
-];
+const titles = ["full stack ai engineer", "creator", "artist"];
 
 export function RotatingTitle() {
   const [index, setIndex] = useState(0);
