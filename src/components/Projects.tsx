@@ -13,20 +13,24 @@ export function Projects() {
           </span>
         </div>
 
+        {/* items-start so an expanding card grows on its own rather than
+            stretching its row-mate to match. */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-start">
           {projects.map((project, index) => (
             <article
               key={project.id}
               tabIndex={0}
               aria-label={project.title}
-              className={`group relative border border-matrix/20 overflow-hidden outline-none transition-colors duration-300 hover:border-matrix/60 focus-visible:border-matrix/60 md:h-[21rem] reveal stagger-${(index % 4) + 1}`}
+              className={`group relative outline-none reveal stagger-${(index % 4) + 1}`}
             >
-              <span className="absolute top-0 right-0 z-10 text-matrix text-[10px] px-2 py-1 border-b border-l border-matrix/20 group-hover:text-matrix-light">
-                {project.id}
-              </span>
+              {/* The face never changes on hover — same title, caption, pills and
+                  summary — and sizes to its content, so short cards carry no
+                  dead space. */}
+              <div className="relative bg-[#050505] border border-matrix/20 group-hover:border-matrix/60 group-focus-visible:border-matrix/60 transition-colors duration-300 p-6 md:p-8 flex flex-col gap-4">
+                <span className="absolute top-0 right-0 text-matrix text-[10px] px-2 py-1 border-b border-l border-matrix/20 group-hover:text-matrix-light">
+                  {project.id}
+                </span>
 
-              {/* Resting face: enough to judge the project, never a wall of text. */}
-              <div className="p-6 md:p-8 flex flex-col gap-4 h-full">
                 <header className="pr-14">
                   <h3 className="text-lg md:text-xl font-bold text-white leading-snug group-hover:text-matrix-light transition-colors duration-300">
                     {project.title}
@@ -54,35 +58,32 @@ export function Projects() {
 
                 <p className="text-gray-400 text-sm leading-relaxed">{project.summary}</p>
 
-                <span className="hidden md:block mt-auto text-matrix-dark text-[10px] opacity-60 group-hover:opacity-0 transition-opacity duration-200">
+                <span className="hidden md:block text-matrix-dark text-[10px] opacity-60 group-hover:opacity-0 transition-opacity duration-200">
                   $ cat details.log
                 </span>
               </div>
 
-              {/* Detail: an overlay on desktop, so expanding never reflows the grid.
-                  Below md there is no hover, so the same markup sits inline instead. */}
-              <div
-                className="px-6 pb-6 md:p-6 md:absolute md:inset-0 md:bg-[#050505] md:overflow-y-auto md:flex md:flex-col md:opacity-0 md:pointer-events-none md:transition-opacity md:duration-300 md:group-hover:opacity-100 md:group-focus-visible:opacity-100"
-              >
-                {/* my-auto, not justify-center: centering an overflowing flex child
-                    makes its top scroll-unreachable, which clipped the title here. */}
-                <div className="md:my-auto">
-                  {/* The overlay covers the title, so restate it — otherwise the
-                      bullets arrive with nothing to attach them to. */}
-                  <p className="hidden md:block text-matrix text-xs font-bold mb-1 pr-14 truncate">
-                    {project.title}
-                  </p>
-                  <p className="hidden md:block text-matrix-dark text-[10px] mb-3">
-                    $ cat details.log
-                  </p>
-                  <ul className="space-y-2 border-t border-matrix/20 pt-4 md:border-t-0 md:pt-0">
-                    {project.highlights.map((line) => (
-                      <li key={line} className="flex items-start gap-2 text-gray-300 text-[11px] md:text-xs leading-relaxed">
-                        <span className="text-matrix mt-0.5 shrink-0">▸</span>
-                        <span>{line}</span>
-                      </li>
-                    ))}
-                  </ul>
+              {/* Detail unfolds downward from the card's bottom edge, in flow, so
+                  the cards below are pushed down rather than covered.
+                  grid-rows 0fr→1fr animates to the content's natural height —
+                  a max-height guess would either clip or ease against dead space,
+                  and it transitions symmetrically, so collapsing is as smooth as
+                  opening. Below md there is no hover, so it is static content. */}
+              <div className="md:grid md:grid-rows-[0fr] md:transition-[grid-template-rows] md:duration-300 md:ease-out md:group-hover:grid-rows-[1fr] md:group-focus-visible:grid-rows-[1fr]">
+                <div className="md:overflow-hidden">
+                  <div className="px-6 pb-6 md:px-8 md:py-5 md:bg-[#050505] md:border md:border-t-0 md:border-matrix/60">
+                    <p className="hidden md:block text-matrix-dark text-[10px] mb-3">
+                      $ cat details.log
+                    </p>
+                    <ul className="space-y-2 border-t border-matrix/20 pt-4 md:border-t-0 md:pt-0">
+                      {project.highlights.map((line) => (
+                        <li key={line} className="flex items-start gap-2 text-gray-300 text-[11px] md:text-xs leading-relaxed">
+                          <span className="text-matrix mt-0.5 shrink-0">▸</span>
+                          <span>{line}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               </div>
             </article>
