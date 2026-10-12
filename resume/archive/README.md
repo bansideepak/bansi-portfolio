@@ -9,4 +9,5 @@ download button serves and which `src/` content is matched against.
 | File | Notes |
 | --- | --- |
 | `2026-07-22-Bollapally_Bansideepak_Resume.pdf` | Older layout; tagline was "AI Engineer / Full Stack Developer". Was the served resume until Aug 2026. |
-| `2026-08-14-Bansi_Deepak_Bollapally-check.pdf` | Proof copy of the current build, ten minutes before the final compile. |
+| `2026-08-14-Bansi_Deepak_Bollapally-check.pdf` | Proof copy of the Aug 14 build, ten minutes before its final compile. |
+| `2026-08-14-Bansi_Deepak_Bollapally.pdf` | Summary claimed "3.5 years" of experience; otherwise word-for-word the Oct 2026 build. Was the served resume until Oct 2026. |

@@ -21,7 +21,7 @@ export function About() {
           <ScrollReveal stagger={3}>
             <p>
               <span className="text-matrix">Summary:</span> Full Stack AI
-              Engineer with 3.5 years of hands-on experience building
+              Engineer with 2 years of hands-on experience building
               production web applications end-to-end: React/Next.js frontends,
               Node.js/TypeScript and Python/FastAPI backends, and PostgreSQL
               data layers. Writes tests first (Jest, Vitest, Playwright) and
